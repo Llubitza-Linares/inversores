@@ -1,19 +1,24 @@
-import React from 'react';
-import Login from "./components/Login"
-import "./App.css";
-import { useSelector } from 'react-redux';
-import {selectUser} from "./features/userSlice";
-import Logout from "./components/Logout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Landing, Error, Dashboard, Register} from "./pages";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
-const App = () => {
-  const user = useSelector(selectUser);
 
+function App() {
   return (
-    <div>
-      {user ? <Logout /> : <Login />}
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Dashboard />} />
+      <Route path='landing' element={<Landing />} />
+      <Route path='register' element={<Register />} />
+      <Route path='*' element={<Error />} />
+    </Routes>
+    <ToastContainer position='top-center'/>
+  </BrowserRouter>
+
   );
-};
+   
+}
 
 
 export default App;
