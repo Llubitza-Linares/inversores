@@ -19,5 +19,4 @@ const NavLinks =({toggleSidebar}) => {
                     </div>
     )
 }
-
 export default NavLinks
