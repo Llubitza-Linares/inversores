@@ -27,7 +27,7 @@ function Register () {
     };
     const onSubmit = (e) => {
         e.preventDefault();
-        const {name, email,password,isMember} = values
+        const {name, email,password,isMember} = values;
         if(!email || !password || (!isMember && !name)) {
             toast.error('Please fill out all fields');
             return;
@@ -47,9 +47,9 @@ function Register () {
         if(user){
             setTimeout(() => {
                 navigate('/');
-        }, 2000);
+        }, 3000);
     }
-}, [user]);
+}, [user, navigate]);
 
     return (
         <Wrapper className='full-page'>
