@@ -21,7 +21,10 @@ const Profile = () => {
         if(!name || !email || !lastName || !location){
             toast.error('please fill out all fields');
             return;
+
         }
+        dispatch(updateUser(userData));
+        
     };
 
     const handleChange = (e) => {
