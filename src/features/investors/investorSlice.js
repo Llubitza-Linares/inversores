@@ -8,9 +8,9 @@ const initialState = {
   name: '',
   lastName: '',
   location: '',
-  jobTypeOptions: ['full-time', 'part-time', 'remote', 'internship'],
-  jobType: 'full-time',
-  statusOptions: ['interview', 'declined', 'pending'],
+  investorTypeOptions: ['credit', 'debit', 'both'],
+  investorType: 'both',
+  statusOptions: ['in debt', 'without debt', 'pending'],
   status: 'pending',
   isEditing: false,
   editJobId: '',
@@ -18,7 +18,16 @@ const initialState = {
 
 const investorSlice = createSlice({
     name:'investors',
-    initialState
-})
+    initialState,
+    reducers: {
+        handleChange : (state, {payload:{name, value}}) => {
+            state[name] = value;
+        },
+        clearValues : () => {
+            return initialState;
+        }
+    },
+});
 
+export const {handleChange, clearValues} = investorSlice.actions;
 export default investorSlice.reducer;

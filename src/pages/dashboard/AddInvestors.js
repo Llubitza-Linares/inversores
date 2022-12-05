@@ -1,7 +1,8 @@
-import { FormRow } from "../../components";
+import { FormRow, FormRowSelect } from "../../components";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from 'react-toastify';
+import { handleChange, clearValues } from "../../features/investors/investorSlice";
 
 const AddInvestors = () => {
     const {
@@ -9,14 +10,14 @@ const AddInvestors = () => {
         name, 
         lastName, 
         location, 
-        jobType, 
-        jobTypeOptions,
+        investorType, 
+        investorTypeOptions,
         status, 
         statusOptions,
         isEditing,
         editJobId
     } = useSelector((store) => store.investor);
-
+    const dispatch = useDispatch();
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!name || !lastName || !location){
@@ -28,7 +29,7 @@ const AddInvestors = () => {
     const handleJobInput =(e)=>{
         const name = e.target.name;
         const value = e.target.value;
-        console.log(name, value);
+        dispatch(handleChange({name, value}));
     };
 
     return( 
@@ -59,11 +60,27 @@ const AddInvestors = () => {
                     value={location}
                     handleChange={handleJobInput}
                 />
+                {/* status*/}
+                <FormRowSelect 
+                    name="status" 
+                    value={status} 
+                    handleChange={handleJobInput} 
+                    list={statusOptions}
+                />
+                {/* investor type*/}
+                <FormRowSelect 
+                    name="investorType"  
+                    labelText='investor type'
+                    value={investorType}
+                    handleChange={handleJobInput} 
+                    list={investorTypeOptions}
+                />
+                
                 <div className="btn-container">
                     <button 
                         type="button" 
                         className="btn btn-block clear-btn"
-                        onClick={() => console.log('clear values')}
+                        onClick={() => dispatch(clearValues())}
                     >
                         clear
                     </button>
@@ -81,5 +98,4 @@ const AddInvestors = () => {
     </Wrapper>
     );
 };
-
 export default AddInvestors;
