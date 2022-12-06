@@ -41,6 +41,7 @@ const userSlice = createSlice({
         toggleSidebar: (state) => {
             state.isSidebarOpen = !state.isSidebarOpen;
           },
+          
         logoutUser: (state) => {
           state.user = null;
           state.isSidebarOpen = false;

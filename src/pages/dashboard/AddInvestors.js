@@ -2,7 +2,8 @@ import { FormRow, FormRowSelect } from "../../components";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from 'react-toastify';
-import { handleChange, clearValues } from "../../features/investors/investorSlice";
+import { handleChange, clearValues, createInvestor } from "../../features/investors/investorSlice";
+import { useEffect } from "react";
 
 const AddInvestors = () => {
     const {
@@ -17,13 +18,17 @@ const AddInvestors = () => {
         isEditing,
         editJobId
     } = useSelector((store) => store.investor);
+    
+    const {user} = useSelector((store) => store.user)
     const dispatch = useDispatch();
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if(!name || !lastName || !location){
             toast.error('Please fill out all fields')
             return
         }
+        dispatch(createInvestor({name, lastName, location, investorType, status}))
     }
 
     const handleJobInput =(e)=>{
@@ -31,6 +36,14 @@ const AddInvestors = () => {
         const value = e.target.value;
         dispatch(handleChange({name, value}));
     };
+
+    useEffect(()=>{
+        if(!isEditing) {
+        dispatch(handleChange({
+            name:'location', 
+            value:user.location}));
+        }
+    }, []);
 
     return( 
     <Wrapper>
