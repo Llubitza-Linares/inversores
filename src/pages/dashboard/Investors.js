@@ -1,5 +1,14 @@
+import { InvestorContainer, SearchContainer } from "../../components";
+
+
 const Investors = () => {
-    return <h1>Investors</h1>;
+    return (
+        <>
+        <SearchContainer />
+        <InvestorContainer/>
+        
+        </>
+    )
 };
 
 export default Investors;
