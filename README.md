@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Inversores App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Inversores App es una pagina web donde cada persona podra registrarse y con ella llevar un seguimiento de su dinero, siendo asi que puedas ver una lista de inversores, agregar nuevos inversores y que con esto se pueda ver el ingreso o salida de dinero.
 
-## Available Scripts
+Se contara con las siguientes paginas:
 
-In the project directory, you can run:
+* All investor : estaran las cartas de cada uno de los inversores
+* Add investor : agregar nuevos inversores a la lista
+* Profile : esta el perfil del usuario
+
+## Lista de Requerimientos
+
+* Realizar un login
+* Dentro del login implementar guards
+* Implementar la libreria REDUX
+* Tener un menu en la cual se pueda dirigir a las demas paginas
+* Tener una lista de inversores 
+* Agregar nuevos inversores
+* Inversores capaces de mandar dinero
+* Mostrar el dinero acumulado
+
+## Backend
+
+'https://jobify-prod.herokuapp.com/api/v1/toolkit'
+
+## Repositorio
+
+https://github.com/Llubitza-Linares/inversores/
+
+## Documentacion de Instalacion del producto
+
+Para poder ver la pagina o hacerla correr en su maquina se debe clonar el codigo del repositorio principal del proyecto, ademas de clonar el codigo se instalaron ciertas librerias para que pueda funcionar de la manera mas optima.
+
+Las librerias que se instalaron son las siguientes:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Con este comando se va a correr la pagina web
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm install normalize.css`
 
-### `npm test`
+Con la libreria normalize se da un mismo formato y mejor forma de lectura al css de nuestra pagina web
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install styled-components`
 
-### `npm run build`
+Se realizan todos los estilos que se pueden implementar a cada uno de los componentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm install react-router-dom@6`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Es un documento de react sirve para movernos a traves de las rutas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm install --save react toastify`
 
-### `npm run eject`
+Con react toastify se crean los mensajes que aparecen en la pantalla, mensajes de error, warning o success
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `npm install @reduxjs/toolkit react-redux`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+La instalacion de la libreria Redux para que podamos trabajar con ella de la mejor forma y asi implementarla en nuestro login y que los datos se almacenen 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `npm install axios`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Con axios podemos agregar cada uno de los metodos para realizar el get, post, patch y delete
 
-## Learn More
+### `npm install react-icons`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+React cuenta con muchos iconos y para poder usarlos se debe instalar la libreria de react-icons y atraves de ella podremos acceder y usar cada uno de los iconos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm install moment`
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Con la libreria moment se llega a mejorar la visualizacion de la fecha, hora y año
