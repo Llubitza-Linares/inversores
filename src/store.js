@@ -1,12 +1,13 @@
-import {configureStore} from "@reduxjs/toolkit"
-import investorSlice from "./features/investors/investorSlice";
-import userSlice from "./features/user/userSlice";
-import AllInvestorsSlice from "./features/allInvestors/AllInvestorsSlice";
+import {configureStore} from '@reduxjs/toolkit';
+
+import userSlice from './features/user/userSlice';
+import jobSlice from './features/job/jobSlice';
+import allJobsSlice from './features/allJobs/allJobsSlice';
 
 export const store = configureStore({
-    reducer: {
-        user: userSlice, 
-        investor: investorSlice,
-        allInvestors: AllInvestorsSlice
-    },
+  reducer: {
+    user: userSlice,
+    job: jobSlice,
+    allJobs: allJobsSlice
+  },
 });

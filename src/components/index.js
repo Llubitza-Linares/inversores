@@ -1,18 +1,20 @@
-import BigSidebar from "./BigSidebar";
+import Logo from "./Logo";
 import FormRow from "./FormRow";
+import NavBar from "./NavBar";
+import BigSideBar from "./BigSideBar";
+import SmallSideBar from "./SmallSideBar";
 import FormRowSelect from "./FormRowSelect";
-import InvestorContainer from "./InvestorContainer";
-import Navbar from "./Navbar";
+import JobsContainer from "./JobsContainer";
 import SearchContainer from "./SearchContainer";
-import SmallSidebar from "./SmallSidebar";
 
 
 export {
-    FormRow, 
-    Navbar,
-    SmallSidebar,
-    BigSidebar, 
+    Logo, 
+    FormRow,
+    NavBar, 
+    BigSideBar,
+    SmallSideBar, 
     FormRowSelect, 
-    InvestorContainer, 
-    SearchContainer
-};
+    JobsContainer, 
+    SearchContainer,
+}

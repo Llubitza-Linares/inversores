@@ -1,5 +1,5 @@
 const SearchContainer = () => {
-    return <h2>SearchContainer</h2>
+    return <h2>All Investors</h2>
     
 }
 

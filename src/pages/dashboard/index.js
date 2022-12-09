@@ -1,8 +1,7 @@
-import AddInvestors from "./AddInvestors";
-import Investors from "./Investors";
+import AddJob from "./AddJob";
+import AllJobs from "./AllJobs";
 import Profile from "./Profile";
-import SharedLayout from "./SharedLayout";
 import Stats from "./Stats";
+import SharedLayout from "./SharedLayout";
 
-
-export{Profile, AddInvestors, Investors, Stats, SharedLayout};
+export {Profile, AddJob, AllJobs, Stats, SharedLayout}
