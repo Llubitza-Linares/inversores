@@ -21,7 +21,7 @@ function App(){
           </ProtectedRoute>
           
         } >
-        <Route index element={<Stats />} />
+        <Route index element={<AllJobs />} />
         <Route path='all-investor' element={<AllJobs />} />
         <Route path= 'add-investor' element={<AddJob />} />
         <Route path="profile" element={<Profile />} />
