@@ -6,7 +6,6 @@ import {
   Profile, 
   AddJob, 
   AllJobs, 
-  Stats, 
   SharedLayout,
 
 } from './pages/dashboard'

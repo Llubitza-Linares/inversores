@@ -1,29 +1,23 @@
-import { IoBarChartSharp } from 'react-icons/io5';
 import { MdQueryStats } from 'react-icons/md';
 import { FaWpforms } from 'react-icons/fa';
 import { ImProfile } from 'react-icons/im';
 
 const links = [
-    //{
-       // id: 1,
-       // text: 'stats',
-       // path: '/',
-       // icon: <IoBarChartSharp />,
-     // },
+
   {
-    id: 2,
+    id: 1,
     text: 'all investor',
     path: 'all-investor',
     icon: <MdQueryStats />,
   },
   {
-    id: 3,
+    id: 2,
     text: 'add investor',
     path: 'add-investor',
     icon: <FaWpforms />,
   },
   {
-    id: 4,
+    id: 3,
     text: 'profile',
     path: 'profile',
     icon: <ImProfile />,

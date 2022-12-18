@@ -82,11 +82,12 @@ const Wrapper = styled.article`
     margin-top: 1rem;
   }
   .edit-btn,
-  .delete-btn {
+  .delete-btn{
     letter-spacing: var(--letterSpacing);
     cursor: pointer;
     height: 30px;
   }
+  
   .edit-btn {
     color: var(--green-dark);
     background: var(--green-light);
@@ -95,10 +96,30 @@ const Wrapper = styled.article`
   .delete-btn {
     color: var(--red-dark);
     background: var(--red-light);
+    margin-right: 6rem;
+  }
+  .money1-btn {
+    background: #fcefc7;
+    color: #e9b949;
+    margin-right: 0.5rem;
+  }
+
+  .money2-btn {
+    background: #ffeaa9;
+    color: #e9b949;
+    margin-right: 0.5rem;
+  }
+
+  .money3-btn {
+    background: #ffe490;
+    color: #e9b949;
+    margin-right: 0.5rem;
   }
   &:hover .actions {
     visibility: visible;
   }
+
+
 `;
 
 export default Wrapper;

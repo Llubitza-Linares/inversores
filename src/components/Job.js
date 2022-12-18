@@ -1,4 +1,4 @@
-import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from "react-icons/fa";
+import { FaLocationArrow, FaCalendarAlt } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 import Wrapper from "../assets/wrappers/Job";
 import { useDispatch } from "react-redux";
@@ -6,18 +6,20 @@ import JobInfo from "./JobInfo";
 import moment from "moment";
 import { deleteJob, setEditJob } from "../features/job/jobSlice";
 
+
 const Job = ({
     _id,
     position,
     company,
     jobLocation,
-    jobType,
     createdAt,
-    status,
-}) => {
+    }) => {
     const dispatch = useDispatch();
 
+
     const date = moment(createdAt).format('MMM Do, YYYY');
+
+
 
     return (
         <Wrapper>
@@ -32,21 +34,20 @@ const Job = ({
                 <div className="content-center">
                     <JobInfo icon={<FaLocationArrow/>} text={jobLocation}/>
                     <JobInfo icon={<FaCalendarAlt/>} text={date}/>
-                    <JobInfo icon={<FaBriefcase/>} text={jobType}/>
-                    <div className={`status ${status}`}>{status}</div>
+                   
                 </div>
                 <footer>
                     <div className='actions'>
                         <Link
-                            to='/add-job'
+                            to='/add-investor'
                             className='btn edit-btn'
                             onClick={() => dispatch(setEditJob({
                                 editJobId:_id,
                                  position, 
                                  company, 
                                  jobLocation,
-                                 jobType,
-                                 status
+                        
+
                                 })
                                 )
                             }
@@ -59,6 +60,30 @@ const Job = ({
                         onClick={() => dispatch(deleteJob(_id))}
                         >
                             delete
+                        </button>
+
+                        <button
+                        type='button'
+                        className='btn money1-btn'
+                       // onClick={s=+20}
+                        >
+                            20Bs.
+                        </button>
+
+                        <button
+                        type='button'
+                        className='btn money2-btn'
+                        onClick={() => dispatch(deleteJob(_id))}
+                        >
+                            50Bs.
+                        </button>
+
+                        <button
+                        type='button'
+                        className='btn money3-btn'
+                        onClick={() => dispatch(deleteJob(_id))}
+                        >
+                            100Bs.
                         </button>
 
                     </div>

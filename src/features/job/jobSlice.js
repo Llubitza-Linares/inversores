@@ -8,10 +8,6 @@ const initialState = {
   position: '',
   company: '',
   jobLocation: '',
-  jobTypeOptions: ['full-time', 'part-time', 'remote', 'internship'],
-  jobType: 'full-time',
-  statusOptions: ['interview', 'declined', 'pending'],
-  status: 'pending',
   isEditing: false,
   editJobId: '',
 };
@@ -62,7 +58,7 @@ const jobSlice = createSlice({
         toast.error(payload);
     },
     [deleteJob.fulfilled]: (state, {payload}) => {
-        toast.success(payload);
+        toast.success('Success! Investor removed');
     },
     [deleteJob.rejected]: (state, {payload}) => {
         toast.error(payload);

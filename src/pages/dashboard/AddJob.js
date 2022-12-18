@@ -1,4 +1,4 @@
-import { FormRow, FormRowSelect } from "../../components";
+import { FormRow,  } from "../../components";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useSelector, useDispatch } from "react-redux";
 import {toast} from "react-toastify";
@@ -16,10 +16,6 @@ const AddJob = () => {
     position,
     company,
     jobLocation,
-    jobType,
-    jobTypeOptions,
-    status,
-    statusOptions,
     isEditing,
     editJobId,
   } = useSelector((store) => store.job);
@@ -29,19 +25,19 @@ const AddJob = () => {
     e.preventDefault();
 
     if(!position || !company || !jobLocation){
-    toast.error('Plase fill out all fields')
+    toast.error('Please fill out all fields')
     return
     }
     if (isEditing){
       dispatch(
         editJob({
           jobId: editJobId,
-          job: {position, company, jobLocation, jobType, status}
+          job: {position, company, jobLocation}
         })
       )
       return
     }
-    dispatch(createJob({position, company, jobLocation, jobType, status}))
+    dispatch(createJob({position, company, jobLocation}))
   }
 
   const handleJobInput = (e) => {
@@ -63,7 +59,7 @@ const AddJob = () => {
   return(
     <Wrapper>
       <form className='form'>
-        <h3>{isEditing ? 'edit job' : 'add job'}</h3>
+        <h3>{isEditing ? 'edit investor' : 'add investor'}</h3>
         <div className='form-center'>
           {/*position */  }
           <FormRow
@@ -89,21 +85,7 @@ const AddJob = () => {
           value={jobLocation}
           handleChange={handleJobInput}
           />
-          {/*status */ }
-         <FormRowSelect 
-          name="status" 
-          value={status} 
-          handleChange={handleJobInput}
-          list={statusOptions}
-          />
-          {/*job type */ }
-         <FormRowSelect 
-          name='jobType' 
-          labelText='investment type'
-          value={jobType} 
-          handleChange={handleJobInput}
-          list={jobTypeOptions}
-          />
+         
           <div className='btn-container'>
             <button
               type='button'
