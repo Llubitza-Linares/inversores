@@ -13,7 +13,7 @@ const Landing = () => {
                         inversores <span> App</span>
                     </h1>
                     <p>
-                        Inversores App es una página donde cada persona podrá tener un segruimiento sobre las distintas invesiones que tiene. Contará con una lista de sus propios inversores y de igual manera será capaz de actualizar su dinero.
+                        Inversores App es una página donde cada persona podrá tener un seguimiento sobre las distintas invesiones que tiene. Contará con una lista de sus propios inversores y de igual manera será capaz de actualizar su dinero.
                     </p>
                 <Link to ='/register' className='btn btn-hero'>
                     Login/Register
