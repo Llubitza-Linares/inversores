@@ -1,25 +1,44 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Job from "./Job";
 import Wrapper from "../assets/wrappers/JobsContainer";
 import { useSelector, useDispatch } from "react-redux";
 import Loading from "./Loading";
 import { getAllJobs } from "../features/allJobs/allJobsSlice";
+import WrapperStats from "../assets/wrappers/StatsContainer";
+import StatItem from "./StatItem";
 
 const JobsContainer = () => {
-    const {jobs, isLoading} = useSelector((store)=>store.allJobs)
+    const { jobs, isLoading } = useSelector((store) => store.allJobs)
+    // const defaultStats = [
+    //     {title: 'Total Money',
+    //     count: 0,
+    //     color: '#e9b949',
+    //     bcg: '#fcefc7'
+    // }
+    // ]
+    const [defaultStats, setDefaultStats] = useState({
+        title: 'Total Money',
+        count: 0,
+        color: '#e9b949',
+        bcg: '#fcefc7'
+    })
+    
+
+    // const [count,setCount] = useState(0)
+    // setCount(()=>count=50)
     const dispatch = useDispatch();
 
-    useEffect(() =>{
+    useEffect(() => {
         dispatch(getAllJobs());
     }, []);
 
-    if(isLoading) {
+    if (isLoading) {
         return (
-            <Loading center/>
+            <Loading center />
         )
     }
 
-    if(jobs.length === 0) {
+    if (jobs.length === 0) {
         return (
             <Wrapper>
                 <h2>No investors to display...</h2>
@@ -27,14 +46,27 @@ const JobsContainer = () => {
         )
     }
 
-    return <Wrapper>
-        <h5>investor info</h5>
-        <div className="jobs">
-            {jobs.map((job) => {
-                return <Job key={job._id} {...job} />
-            })}
-        </div>
-    </Wrapper>
+    return (
+        // <p>Hola</p>
+        // <button onClick={() => setCount(count+1)}>Hola{count} </button>
+        <>
+            <WrapperStats>
+                <StatItem  {...defaultStats} />
+            </WrapperStats>
+
+            <Wrapper>
+                <h5>investor info</h5>
+                <div className="jobs">
+                    {jobs.map((job) => {
+                        let j = {...job, state: defaultStats, setDefaultStats: setDefaultStats}
+                        // console.log(j);
+                        return <Job key={job._id} {...j} />
+                    })}
+                </div>
+
+            </Wrapper>
+        </>
+    )
 
 }
 

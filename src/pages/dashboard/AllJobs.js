@@ -1,10 +1,9 @@
-import { JobsContainer, StatsContainer} from "../../components"
-
+import { JobsContainer} from "../../components"
 
 const AllJobs = () => {
     return (
         <>
-        <StatsContainer />
+  
         <JobsContainer/>
         </>
     )

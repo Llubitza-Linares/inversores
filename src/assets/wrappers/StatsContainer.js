@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Wrapper = styled.section`
+const WrapperStats = styled.section`
   display: grid;
   row-gap: 2rem;
   margin-left: 20rem;
@@ -13,4 +13,4 @@ const Wrapper = styled.section`
     column-gap: 1rem;
   }
 `
-export default Wrapper
+export default WrapperStats

@@ -1,6 +1,6 @@
 import Wrapper from "../assets/wrappers/StatItem"
 
-const StatItem = ({count, title, color, bcg}) => {
+const StatItem = ({count, title, color, bcg, setCount}) => {
 return (
 <Wrapper color={color} bcg={bcg}>
     <header>
