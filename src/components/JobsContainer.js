@@ -9,23 +9,13 @@ import StatItem from "./StatItem";
 
 const JobsContainer = () => {
     const { jobs, isLoading } = useSelector((store) => store.allJobs)
-    // const defaultStats = [
-    //     {title: 'Total Money',
-    //     count: 0,
-    //     color: '#e9b949',
-    //     bcg: '#fcefc7'
-    // }
-    // ]
     const [defaultStats, setDefaultStats] = useState({
         title: 'Total Money',
-        count: 0,
+        count: 70,
         color: '#e9b949',
         bcg: '#fcefc7'
     })
     
-
-    // const [count,setCount] = useState(0)
-    // setCount(()=>count=50)
     const dispatch = useDispatch();
 
     useEffect(() => {

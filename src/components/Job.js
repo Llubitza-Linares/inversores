@@ -63,7 +63,7 @@ const Job = ({
                                 type='button'
                                 className='btn money1-btn'
                                 onClick={() => setDefaultStats({
-                                    title: 'Toatl Money',
+                                    title: 'Total Money',
                                     count: state.count+20,
                                     color: '#e9b949',
                                     bcg: '#fcefc7'
@@ -76,7 +76,7 @@ const Job = ({
                                 type='button'
                                 className='btn money2-btn'
                                 onClick={() => setDefaultStats({
-                                    title: 'Toatl Money',
+                                    title: 'Total Money',
                                     count: state.count+50,
                                     color: '#e9b949',
                                     bcg: '#fcefc7'
@@ -89,7 +89,7 @@ const Job = ({
                                 type='button'
                                 className='btn money3-btn'
                                 onClick={() => setDefaultStats({
-                                    title: 'Toatl Money',
+                                    title: 'Total Money',
                                     count: state.count+100,
                                     color: '#e9b949',
                                     bcg: '#fcefc7'
