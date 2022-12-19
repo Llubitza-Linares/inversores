@@ -1,5 +1,5 @@
-import AddJob from "./AddJob";
-import AllJobs from "./AllJobs";
+import AddJob from "./AddInvestor";
+import AllJobs from "./AllInvestors";
 import Profile from "./Profile";
 import SharedLayout from "./SharedLayout";
 
