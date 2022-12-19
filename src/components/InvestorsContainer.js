@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Job from "./Job";
-import Wrapper from "../assets/wrappers/JobsContainer";
+import Job from "./Investor";
+import Wrapper from "../assets/wrappers/InvestorsContainer";
 import { useSelector, useDispatch } from "react-redux";
 import Loading from "./Loading";
 import { getAllJobs } from "../features/allJobs/allJobsSlice";

@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import BigSideBar from "./BigSideBar";
 import SmallSideBar from "./SmallSideBar";
 import FormRowSelect from "./FormRowSelect";
-import JobsContainer from "./JobsContainer";
+import JobsContainer from "./InvestorsContainer";
 
 
 

@@ -4,8 +4,8 @@ import { ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {
   Profile, 
-  AddJob, 
-  AllJobs, 
+  AddJob,  
+  AllJobs,
   SharedLayout,
 
 } from './pages/dashboard'
