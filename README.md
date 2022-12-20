@@ -19,10 +19,6 @@ Se contara con las siguientes paginas:
 * Inversores capaces de mandar dinero
 * Mostrar el dinero acumulado
 
-## Backend
-
-'https://jobify-prod.herokuapp.com/api/v1/toolkit'
-
 ## Repositorio
 
 https://github.com/Llubitza-Linares/inversores/
