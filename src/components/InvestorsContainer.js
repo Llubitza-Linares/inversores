@@ -11,7 +11,7 @@ const JobsContainer = () => {
     const { jobs, isLoading } = useSelector((store) => store.allJobs)
     const [defaultStats, setDefaultStats] = useState({
         title: 'Total Money',
-        count: 70,
+        count: 0,
         color: '#e9b949',
         bcg: '#fcefc7'
     })
